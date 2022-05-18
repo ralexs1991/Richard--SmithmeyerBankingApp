@@ -4,10 +4,16 @@ function Login(){
     const [valid, setValid]       = React.useState('');
     const ctx = React.useContext(UserContext);  
   
-    function validate(field, 
-                       
-                       value){
-  
+     function validate(field, label){
+      if (!field) {
+        setStatus('Error: ' + label);
+        setTimeout(() => setStatus(''),3000);
+        return false;
+      }
+      return true;
+  }
+
+ 
       function showError(errorMsg, showErrorMsg) {
       if (showErrorMsg === 1){
         setStatus('Error: ' + errorMsg);
