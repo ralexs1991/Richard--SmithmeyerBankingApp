@@ -11,7 +11,7 @@ function Withdrawl() {
     }
     balance = parseFloat(balance).toFixed(2);
     
-    function validate(field, errorMsg, value){
+    function validate(field, value){
       function showError(errorMsg, showErrorMsg) {
       if (showErrorMsg === 1){
         setStatus('Error: ' + errorMsg);
