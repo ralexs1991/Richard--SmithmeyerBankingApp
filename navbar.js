@@ -10,7 +10,7 @@ function NavBar(){
         index = ctx.users.indexOf(user[0]);
         setCurrentUser(user[0]);
       }
-    }, [ctx.users, users]);
+    }, [ctx.users]);
     function renderTooltip() { 
     return <Tooltip>Tooltip for the Register button</Tooltip>;
     } 
