@@ -5,7 +5,7 @@ function NavBar(){
 
     const [currentUser, setCurrentUser] = React.useState();
     React.useEffect(() => {
-      let user = ctx.users.filter((user) => user.log === true);
+      let users = ctx.users.filter((user) => user.log === true);
       let index;
       if (user.length > 0) {
         index = ctx.users.indexOf(user[0]);
