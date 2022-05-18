@@ -8,7 +8,7 @@ function Spa() {
                 <Route path="/login/" exact component={Login} />
                 <Route path="/deposit/" exact component={Deposit} />
                 <Route path="/withdraw/" exact component={Withdrawl} />
-                <Route path="/balance/" component={Balance} />
+                <Route path="/balance/" component={balance} />
                 <Route path="/alldata/" exact component={AllData} />
             </UserContext.Provider>
         </HashRouter>
