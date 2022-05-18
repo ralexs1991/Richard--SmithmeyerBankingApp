@@ -42,7 +42,7 @@ function Login(){
         }
         return true;
         }
-    }
+    
   
     function handle(){
       console.log(email,password);
