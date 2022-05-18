@@ -8,6 +8,15 @@ function CreateAccount() {
     //const [errEmail, seterrEmail] = React.useState('');
    //const [errPassword, seterrPassword] = React.useState('');
     const ctx = React.useContext(UserContext);
+    
+     function validate(field, label){
+      if (!field) {
+        setStatus('Error: ' + label);
+        setTimeout(() => setStatus(''),3000);
+        return false;
+      }
+      return true;
+  }
 
     function handleCreate(){
         console.log(name,email,password);
