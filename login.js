@@ -3,6 +3,7 @@ function Login(){
     const [logInStatus, setLogInStatus]     = React.useState('');
     const [valid, setValid]       = React.useState('');
     const ctx = React.useContext(UserContext);  
+    let field =();
   
      function validate(field, label){
       if (!field) {
