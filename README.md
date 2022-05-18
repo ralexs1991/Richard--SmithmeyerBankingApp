@@ -1,1 +1,1 @@
-# Richard--SmithmeyerBankingApp
+# Richard-A-SmithmeyerBankingApp
