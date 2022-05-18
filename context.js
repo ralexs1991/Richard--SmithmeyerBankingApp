@@ -2,7 +2,7 @@ const Route = ReactRouterDOM.Route;
 const Link = ReactRouterDOM.Link
 const HashRouter = ReactRouterDOM.HashRouter;
 const UserContext = React.createContext(null);
-const bankContext = React.createContext();
+const BankContext = React.createContext();
 let loggedin;
 
 function Card(props) {
