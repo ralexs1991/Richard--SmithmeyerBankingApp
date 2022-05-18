@@ -21,29 +21,7 @@ function Login(){
         setTimeout(() => setStatus(''), 3000);
       }
     }
-      
-  
-    let errorMsg = '';
-  
-    if (field === 'email'){
-      errorMsg = 'Must enter a valid Email';
-        if(value === ''){
-          setValid(false);
-          showError(errorMsg, showErrorMsg);
-          return false;
-        } else if
-          (field === 'password') {
-            errorMsg = 'Enter a valid password. Password must contain 8+ characters';
-            if (value.length < 8){
-              setValid(false);
-              showError(errorMsg, showErrorMsg);
-              return false;
-            } else if (value.length >= 8) {
-          }
-        }
-        return true;
-        }
-    
+        
   
     function handle(){
       console.log(email,password);
