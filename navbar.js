@@ -1,6 +1,6 @@
 function NavBar(){
     const ctx = React.useContext(UserContext);
-    const {logout, users} = React.useContext(bankContext);
+    const {users} = React.useContext(bankContext);
     let history = userHistory();
 
     const [currentUser, setCurrentUser] = React.useState();
