@@ -1,4 +1,4 @@
-function Deposit(name, email, password, log, amount) {
+function Deposit(name, email, password, log,) {
     const ctx = React.useContext(UserContext);
     const [show, setShow]         = React.useState(true);
     const [isValid, setIsValid]   = React.useState(false);
