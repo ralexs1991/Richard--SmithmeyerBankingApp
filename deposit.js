@@ -9,7 +9,7 @@ function Deposit(name, email, password, log,) {
         } else {            
       alert('Please Login first');     
     }        
-    console.log('user', user);  
+    console.log('user',);  
  
   
   function validate (field, value) {
