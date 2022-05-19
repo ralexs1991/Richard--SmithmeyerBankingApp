@@ -26,8 +26,7 @@ function AllData() {
                               <div className="padded">{user.password}</div>
                               <div className="padded">
                                  <strong><em> Balance: ${user.balance}</em></strong>
-                              {user.history.map((transaction, i) => 
-                              <Transaction key={i} t={transaction}/>
+                              />
                               )}
                               </div>
                           </div>
