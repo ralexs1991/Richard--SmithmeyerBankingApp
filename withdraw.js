@@ -3,6 +3,7 @@ function Withdrawl() {
     const [isValid, setIsValid]   = React.useState(false);
     const [status, setStatus]     = React.useState('');
     const [amount, setAmount]     = React.useState('');
+    const [balance, setBalance] = React.useState('');
     const ctx = React.useContext(UserContext); 
   
     let balance = 0;
