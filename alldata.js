@@ -21,11 +21,11 @@ function AllData() {
                   {ctx.users.map((user, index) => {
                       return (
                           <div className="alldata data-item" key={index}>
-                              <div className="offset padded">{user.name}</div>
-                              <div className="padded">{user.email}</div>
-                              <div className="padded">{user.password}</div>
+                              <div className="offset padded">{users.name}</div>
+                              <div className="padded">{users.email}</div>
+                              <div className="padded">{users.password}</div>
                               <div className="padded">
-                                 <strong><em> Balance: ${user.balance}</em></strong>
+                                 <strong><em> Balance: ${users.balance}</em></strong>
                               />
                               )}
                               </div>
