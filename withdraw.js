@@ -77,7 +77,7 @@ function Withdrawl() {
                     type= "input"
                     id= "amount"
                     placeholder='0'
-                    value={amount}
+                    value='amount'
                     onChange={e => validate('amount', e.currentTarget.value, 1)}
                     style={{maxwidth: '300px'}} /> <br/>
                   <input
