@@ -6,7 +6,7 @@ function Table() {
   const ctx   = React.useContext(UserContext);
   const users = ctx.users;
   return (
-    <BootstrapTable
+    <Table
         data={users}
         bodyStyle={{ border: "none" }}
         tableStyle={{ border: "none" }}
@@ -27,7 +27,7 @@ function Table() {
       <TableHeaderColumn dataField={'balance'} dataFormat={priceFormatter}>
         Balance
       </TableHeaderColumn>
-    </BootstrapTable>
+    </Table>
   );
 }
 
