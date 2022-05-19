@@ -26,7 +26,7 @@ function NavBar () {
                             <a data-toggle="tooltip" data-placement="bottom" title="Create Account" className={"#/CreateAccount/" === active ? 'nav-link active' : 'nav-link'} onClick={setClass({href: "#/CreateAccount/"})} href='#/CreateAccount/'>Create Account</a>
                         </li>
                         <li className="nav-item">
-                            <a data-toggle="tooltip" data-placement="bottom" title="Login/Logout" className={"#/Login" === active ? 'nav-link active' : 'nav-link'} onClick={setClass({href:"#/Login"})} href='#/Login/'>Log In/Log Out</a>
+                            <a data-toggle="tooltip" data-placement="bottom" title="Login/Logout" className={"#/Login" === active ? 'nav-link active' : 'nav-link'} onClick={setClass({href:"#/Login"})} href='#/Login/'>Log In</a>
                         </li>
                         <li className="nav-item">
                             <a data-toggle="tooltip" data-placement="bottom" title="Made a deposit" className={"#/deposit/" === active ? 'nav-link active' : 'nav-link'} onClick={setClass({ href: "#/deposit/" })} href='#/deposit/'>Deposit</a>
