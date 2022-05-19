@@ -7,7 +7,6 @@ const [show, setShow]         = React.useState(true);
 const [logInStatus, setLogInStatus]     = React.useState('');
 const [valid, setValid]       = React.useState('');
 const ctx = React.useContext(UserContext);  
-const ctx = React.useContext(UserContext);
 const [show, setShow]         = React.useState(true);
 const [isValid, setIsValid]   = React.useState(false);
 const [status, setStatus]     = React.useState('');
