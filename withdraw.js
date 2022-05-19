@@ -87,7 +87,7 @@ function Withdrawl() {
                     onChange={e => validate('amount', e.currentTarget.value, 1)}
                     style={{maxwidth: '300px'}} /> <br/>
                   <input
-                    type={submit}
+                    type="submit"
                     className={`btn ${isValid ? "btn-primary": "btn-light text-black-50"}`}
                     id='submit-button'
                     value={Withdraw}
