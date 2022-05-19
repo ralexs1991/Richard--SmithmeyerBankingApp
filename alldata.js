@@ -21,7 +21,7 @@ function AllData() {
           <div style={{paddingBottom: "5px"}}>
             <h5 className="text-dark">Current User: {getName()}</h5>
           </div>
-          <MyTable/>
+          <Card/>
         </div>}
     />
   );
