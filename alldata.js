@@ -1,8 +1,3 @@
-import React from 'react';
-import Card from './card';
-import { BootstrapTable, TableHeaderColumn } from "react-bootstrap-table";
-import { UserContext } from './page';
-
 function priceFormatter(cell, row){
   return '$' + Number(cell).toFixed(2);
 }
