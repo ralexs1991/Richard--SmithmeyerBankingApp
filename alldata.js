@@ -1,45 +1,28 @@
-function priceFormatter(cell, row){
-  return '$' + Number(cell).toFixed(2);
-}
+function AllData() {
+  const ctx = React.useContext(UserContext);
+  
+  function getName() {
+    const currentUser = ctx.users.filter((user) => user.loggedIn == true)
+    if (currentUser.length > 0) {
+      return currentUser[0].name;
+    }
+    else {
+      return "No one logged in"
+    }
+  }
 
-function Table() {
-  const ctx   = React.useContext(UserContext);
-  const users = ctx.users;
   return (
-    <Table
-        data={users}
-        bodyStyle={{ border: "none" }}
-        tableStyle={{ border: "none" }}
-        headerStyle={{ border: "none !important" }}
-        striped
-        version="4"
-        height="500"
-    >
-      <TableHeaderColumn isKey dataField={'name'}>
-        Name
-      </TableHeaderColumn>
-      <TableHeaderColumn dataField={'email'}>
-        Email
-      </TableHeaderColumn>
-      <TableHeaderColumn dataField={'password'}>
-        Password
-      </TableHeaderColumn>
-      <TableHeaderColumn dataField={'balance'} dataFormat={priceFormatter}>
-        Balance
-      </TableHeaderColumn>
-    </Table>
-  );
-}
-
-function AllData(){
-  return (
-    <>
-      <h1>All Data</h1>
-      <Card
-        txtcolor="black"
-        header={'Bad Bank Accounts'}
-        body={<Table/>}
-      />
-    </>
+    <Card
+      bgcolor="light"
+      txtcolor="dark"
+      header="All Data"
+      body={
+        <div>
+          <div style={{paddingBottom: "5px"}}>
+            <h5 className="text-dark">Current User: {getName()}</h5>
+          </div>
+          <MyTable/>
+        </div>}
+    />
   );
 }
