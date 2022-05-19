@@ -5,12 +5,7 @@ function Withdrawl() {
     const [amount, setAmount]     = React.useState('');
     const [balance, setBalance] = React.useState('');
     const ctx = React.useContext(UserContext);   
-    
-    if (ctx.users[0]){
-    balance= ctx.users[0].balance;
-    }
-    balance = parseFloat(balance).toFixed(2);
-    
+     
     function validate(field, value){
       function showError(errorMsg, showErrorMsg) {
       if (showErrorMsg === 1){
