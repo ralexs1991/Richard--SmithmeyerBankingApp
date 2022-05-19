@@ -1,20 +1,17 @@
 function Deposit(name, email, password, log, amount) {
     const ctx = React.useContext(UserContext);
-    let user = ctx.users.filter((user) => user.loged === true);
-    if (user.length === 0) {
-      alert('Please Login first');
-      window.location.assign('#/login/');
+     if (ctx.currentUser) {
+            return true;
+        } else {
+            return false;   
+      alert('Please Login first');     
     } else {
       let index = ctx.users.indexOf(user[0]);
       if (amount > 0) {
         setDepositError(false);
         ctx.users[index].balance += Number(amount);
       } else {
-        setDepositError(true);
-  
-        return false;
-      }
-      return true;
+        setDepositError(true);  
     }
   
     console.log('user', user);
