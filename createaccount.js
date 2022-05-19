@@ -4,6 +4,7 @@ function CreateAccount() {
     const [name, setName] = React.useState('');
     const [email, setEmail] = React.useState('');
     const [password, setPassword] = React.useState('');
+    const [balance, setBalance] = React.useState('');
     //const [errName, seterrName] = React.useState('');
     //const [errEmail, seterrEmail] = React.useState('');
    //const [errPassword, seterrPassword] = React.useState('');
