@@ -2,8 +2,7 @@ function Deposit(name, email, password, log, amount) {
     const ctx = React.useContext(UserContext);
      if (ctx.currentUser) {
             return true;
-        } else {
-            return false;   
+        } else {            
       alert('Please Login first');     
     }        
     console.log('user', user);  
