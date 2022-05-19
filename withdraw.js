@@ -65,9 +65,9 @@ function Withdrawl() {
         }
   
         return (
-          <>
+          <Form
             <h1>Withdraw Funds</h1>
-            <Form
+            <Card
               txtcolor= "black"
               header={`Current balance: $${balance}`}
               status= {status}
@@ -99,7 +99,7 @@ function Withdrawl() {
                   </>
               )}
             />    
-          </>
+          />
         )
     }
   
