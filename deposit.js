@@ -6,7 +6,7 @@ function Deposit() {
     const [balance, setBalance] = React.useState('');
     const ctx = React.useContext(UserContext); 
   
-    let balance = 0;
+    
     if (ctx.users[0]){
     balance= ctx.users[0].balance;
     }
