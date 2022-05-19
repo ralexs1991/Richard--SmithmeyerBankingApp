@@ -4,7 +4,8 @@ function Deposit(name, email, password, log,) {
     const [isValid, setIsValid]   = React.useState(false);
     const [status, setStatus]     = React.useState('');
     const [amount, setAmount]     = React.useState('');
-     if (ctx.currentUser) {
+    const [balance, setBalance] = React.useState('');
+     if (ctx.users) {
             return true;
         } else {            
       alert('Please Login first');     
