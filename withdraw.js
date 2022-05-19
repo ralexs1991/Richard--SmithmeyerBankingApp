@@ -3,9 +3,14 @@ function Withdrawl() {
     const [isValid, setIsValid]   = React.useState(false);
     const [status, setStatus]     = React.useState('');
     const [amount, setAmount]     = React.useState('');
-    const [balance, setBalance] = React.useState('');
-    const ctx = React.useContext(UserContext);   
-     
+    const ctx = React.useContext(UserContext); 
+  
+    let balance = 0;
+    if (ctx.users[0]){
+    balance= ctx.users[0].balance;
+    }
+    balance = parseFloat(balance).toFixed(2);
+    
     function validate(field, value){
       function showError(errorMsg, showErrorMsg) {
       if (showErrorMsg === 1){
@@ -36,7 +41,7 @@ function Withdrawl() {
               setValid(false);
               showError(errorMsg, showErrorMsg, 1);
               return false;
-            } else if (value !== '' && Number(value) !== 0 &&!isNaN(value)){
+            } else if (value !== '' && Number(value) !== 0 &&!NaN(value)){
               setAmount(value);
               setIsValid(true);
           }
@@ -63,7 +68,8 @@ function Withdrawl() {
         function clearForm(){
           setAmount('');
         }
-   return (
+  
+        return (
           <>
             <h1>Withdraw Funds</h1>
             <Card
@@ -82,7 +88,7 @@ function Withdrawl() {
                     style={{maxwidth: '300px'}} /> <br/>
                   <input
                     type="submit"
-                    className={`btn "btn-secondary": "btn-dark text-black-50"}`}
+                    className={`btn ${isValid ? "btn-primary": "btn-light text-black-50"}`}
                     id='submit-button'
                     value={Withdrawl}
                     onClick={handleWithdraw} />
@@ -93,7 +99,7 @@ function Withdrawl() {
                   <button
                     type='submit'
                     className="btn btn-primary"
-                    onClick={clearForm}> New Withdrawl 
+                    onClick={clearForm}> New withdraw 
                   </button>
                   </>
               )}
@@ -101,3 +107,6 @@ function Withdrawl() {
           </>
         )
     }
+  
+  
+  
