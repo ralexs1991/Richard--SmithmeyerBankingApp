@@ -25,7 +25,7 @@ function Deposit() {
     if (field === 'amount'){
       if(value === ''){
           errorMsg = 'Enter Deposit amount';
-          setValid(false);
+          setIsValid(false);
           setAmount('');
           showError(errorMsg, showErrorMsg);
           return false;
