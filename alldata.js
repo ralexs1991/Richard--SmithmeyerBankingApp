@@ -7,7 +7,7 @@ function AllData() {
   return (
       
       <Card
-          bgcolor="main"
+          bgcolor="lightgrey"
           header="All Data"
           width="50rem"
           body={
