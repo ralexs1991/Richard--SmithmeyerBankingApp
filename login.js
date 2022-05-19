@@ -7,7 +7,7 @@ function Login(){
   
      function validate(field, label){
       if (!field) {
-        setStatus('Error: ' + label);
+        setLogInStatus('Error: ' + label);
         setTimeout(() => setStatus(''),3000);
         return false;
       }
@@ -17,7 +17,7 @@ function Login(){
  
       function showError(errorMsg, showErrorMsg) {
       if (showErrorMsg === 1){
-        setStatus('Error: ' + errorMsg);
+        setLogInStatus('Error: ' + errorMsg);
         setTimeout(() => setStatus(''), 3000);
       }
           
