@@ -1,6 +1,11 @@
 function NavBar() {
   const ctx = React.useContext(UserContext);
   const [highlight, setHighlight] = React.useState("home")
+  const [active, setActive] = React.useState('#/');
+    const setClass = (element) => (event) => {
+       let link = element.href;
+       setActive(link);
+    }
 
   React.useEffect(() => {
     let isLoggedIn = false;
