@@ -49,7 +49,7 @@ function Deposit() {
         return true;
         }
   
-        function handledeposit(){
+        function handleDeposit(){
           if (!validate ( 'amount', amount, 1)) return;
           if (ctx.users[0]) {
             let newBalance = parseFloat(balance) + parseFloat(amount);
