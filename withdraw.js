@@ -93,7 +93,7 @@ function Withdrawl() {
                   <button
                     type='submit'
                     className="btn btn-primary"
-                    onClick={clearForm}> New withdraw 
+                    onClick={clearForm}> New Withdrawl 
                   </button>
                   </>
               )}
