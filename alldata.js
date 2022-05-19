@@ -26,7 +26,7 @@ function AllData() {
                               <div className="padded">{ctx.users.email}</div>
                               <div className="padded">{ctx.users.password}</div>
                               <div className="padded">
-                                 <strong><em> Balance: '$'{ctx.users.balance}</em></strong>
+                                 <strong><em> Balance: ${ctx.users.balance}</em></strong>
                               />
                               )}
                               </div>
