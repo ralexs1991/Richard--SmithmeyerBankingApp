@@ -90,7 +90,7 @@ function Withdrawl() {
                     type="submit"
                     className={`btn ${isValid ? "btn-primary": "btn-light text-black-50"}`}
                     id='submit-button'
-                    value={Withdraw}
+                    value={Withdrawl}
                     onClick={handleWithdraw} />
                   </>
               ):( 
