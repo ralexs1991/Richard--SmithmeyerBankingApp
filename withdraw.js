@@ -41,7 +41,7 @@ function Withdrawl() {
               setValid(false);
               showError(errorMsg, showErrorMsg, 1);
               return false;
-            } else if (value !== '' && Number(value) !== 0 &&!NaN(value)){
+            } else if (value !== '' && Number(value) !== 0 &&!isNaN(value)){
               setAmount(value);
               setIsValid(true);
           }
