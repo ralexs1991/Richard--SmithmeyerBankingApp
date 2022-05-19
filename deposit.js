@@ -1,5 +1,9 @@
 function Deposit(name, email, password, log, amount) {
     const ctx = React.useContext(UserContext);
+    const [show, setShow]         = React.useState(true);
+    const [isValid, setIsValid]   = React.useState(false);
+    const [status, setStatus]     = React.useState('');
+    const [amount, setAmount]     = React.useState('');
      if (ctx.currentUser) {
             return true;
         } else {            
