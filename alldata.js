@@ -1,39 +1,57 @@
-function AllData(){
+import React from 'react';
+import Card from '../components/card';
+import {Table} from 'react-bootstrap';
+import {UserContext} from '../page';
+
+
+function AllData() {
   const ctx = React.useContext(UserContext);
-  const data = JSON.stringify(ctx);
-  const UserContext = JSON.parse(data);
-  const displayData = UserContext.users.map((info)=>{
-
-      return(
-        <tr key={info.name}>
-          <td>{info.name}</td>
-          <td>{info.email}</td>
-          <td>{info.password}</td>
-          <td>{info.balance.toFixed(2)}</td>
-        </tr>
-      )
-    }
-  )
-
+  console.log(ctx);
+  console.log("ctx users is");
+  console.log(ctx.users);
+  
   return (
-        <>
-          <h1>All Data</h1>
-          <div className="card text-white bg-secondary mb-3" style={{ width: 50 + 'rem', marginLeft: "20px", marginTop: "10px"}}>
-            <div className="card-header">Member Data</div>
-            <table className="table" style={{ color: "lightgrey" }}>
-              <thead>
-                <tr>
-                  <th>Name</th>
-                  <th>Email</th>
-                  <th>Password</th>
-                  <th>Balance</th>
-                </tr>
-              </thead>
-              <tbody>
-                {displayData}
-              </tbody>
-            </table>
-          </div>
-        </>
+      
+      <Card
+          bgcolor="main"
+          header="All Data"
+          width="50rem"
+          body={
+              <>
+              <div className="alldata">
+                  <div className="offset"><h5>Name</h5></div>
+                  <div><h5>Email</h5></div>
+                  <div><h5>Password</h5></div>
+                  <div><h5>Transactions</h5></div>
+              </div>    
+                  {ctx.users.map((user, index) => {
+                      return (
+                          <div className="alldata data-item" key={index}>
+                              <div className="offset padded">{user.name}</div>
+                              <div className="padded">{user.email}</div>
+                              <div className="padded">{user.password}</div>
+                              <div className="padded">
+                                 <strong><em> Balance: ${user.balance}</em></strong>
+                              {user.history.map((transaction, i) => 
+                              <Transaction key={i} t={transaction}/>
+                              )}
+                              </div>
+                          </div>
+                      )
+                  }
+
+
+
+
+                  )}
+              
+              </>
+          }
+      
+      
+      
+      
+      />
+      
   );
 }
