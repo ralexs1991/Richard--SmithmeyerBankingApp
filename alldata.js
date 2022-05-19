@@ -1,51 +1,50 @@
-function AllData() {
-  const ctx = React.useContext(UserContext);
-  console.log(ctx);
-  console.log("ctx users is");
-  console.log(ctx.users);
-  
+import React from 'react';
+import Card from './card';
+import { BootstrapTable, TableHeaderColumn } from "react-bootstrap-table";
+import { UserContext } from './page';
+
+function priceFormatter(cell, row){
+  return '$' + Number(cell).toFixed(2);
+}
+
+function Table() {
+  const ctx   = React.useContext(UserContext);
+  const users = ctx.users;
   return (
-      
+    <BootstrapTable
+        data={users}
+        bodyStyle={{ border: "none" }}
+        tableStyle={{ border: "none" }}
+        headerStyle={{ border: "none !important" }}
+        striped
+        version="4"
+        height="500"
+    >
+      <TableHeaderColumn isKey dataField={'name'}>
+        Name
+      </TableHeaderColumn>
+      <TableHeaderColumn dataField={'email'}>
+        Email
+      </TableHeaderColumn>
+      <TableHeaderColumn dataField={'password'}>
+        Password
+      </TableHeaderColumn>
+      <TableHeaderColumn dataField={'balance'} dataFormat={priceFormatter}>
+        Balance
+      </TableHeaderColumn>
+    </BootstrapTable>
+  );
+}
+
+function AllData(){
+  return (
+    <>
+      <h1>All Data</h1>
       <Card
-          bgcolor="lightgrey"
-          txtcolor="black"
-          header="All Data"
-          width="50rem"
-          body={
-              <>
-              <div className="alldata">
-                  <div className="offset"><h5>Name</h5></div>
-                  <div><h5>Email</h5></div>
-                  <div><h5>Password</h5></div>
-                  <div><h5>Transactions</h5></div>
-              </div>    
-                  {ctx.users.map((user, index) => {
-                      return (
-                          <div className="alldata data-item" key={index}>
-                              <div className="offset padded">{ctx.users.name}</div>
-                              <div className="padded">{ctx.users.email}</div>
-                              <div className="padded">{ctx.users.password}</div>
-                              <div className="padded">
-                                 <strong><em> Balance: ${ctx.users.balance}</em></strong>
-                              />
-                              )}
-                              </div>
-                          </div>
-                      )
-                  }
-
-
-
-
-                  )}
-              
-              </>
-          }
-      
-      
-      
-      
+        txtcolor="black"
+        header={'Bad Bank Accounts'}
+        body={<Table/>}
       />
-      
+    </>
   );
 }
