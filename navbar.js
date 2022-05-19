@@ -1,21 +1,13 @@
-function NavBar() {
-  const ctx = React.useContext(UserContext);
-  const [highlight, setHighlight] = React.useState("home")
-  const [active, setActive] = React.useState('#/');
+function tooltip () {
+    $('[data-toggle="tooltip"]').tooltip();
+}
+
+function NavBar () {
+    const [active, setActive] = React.useState('#/');
     const setClass = (element) => (event) => {
        let link = element.href;
        setActive(link);
     }
-
-  React.useEffect(() => {
-      let user = ctx.users.filter((user) => user.log === true);
-      let index;
-      if (user.length > 0) {
-        index = ctx.users.indexOf(user[0]);
-        setCurrentUser(user[0]);
-      }
-    }, [ctx.users, users]);
- 
 
     return(
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
