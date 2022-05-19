@@ -17,6 +17,12 @@ function Deposit(name, email, password, log,) {
     console.log( ' type:' + typeof value);
     console.log('String:' + value);
   }
+ (value !== '' && Number(value) !== 0 &&!NaN(value));{
+            setAmount(value);
+            setIsValid(true);
+        };
+     
+      
     
      function handleDeposit(){
     if (!validate ( 'amount', amount, 1)) return;
@@ -74,5 +80,5 @@ function Deposit(name, email, password, log,) {
         />    
       </>
     )
-          }
+}
   
