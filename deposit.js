@@ -5,20 +5,8 @@ function Deposit(name, email, password, log, amount) {
         } else {
             return false;   
       alert('Please Login first');     
-    } else {
-      let index = ctx.users.indexOf(user[0]);
-      if (amount > 0) {
-        setDepositError(false);
-        ctx.users[index].balance += Number(amount);
-      } else {
-        setDepositError(true);  
-    }
-  
-    console.log('user', user);
-    
-   
-  
-  
+    }        
+    console.log('user', user);  
  
   
   function validate (field, value) {
