@@ -8,6 +8,7 @@ function AllData() {
       
       <Card
           bgcolor="lightgrey"
+          txtcolor="black"
           header="All Data"
           width="50rem"
           body={
