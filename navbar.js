@@ -15,7 +15,7 @@ function NavBar() {
         setCurrentUser(user[0]);
       }
     }, [ctx.users, users]);
-  }, [])
+ 
 
     return(
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
