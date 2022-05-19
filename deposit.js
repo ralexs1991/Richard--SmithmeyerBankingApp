@@ -38,7 +38,7 @@ function Deposit() {
             return(false);}
             else if (value !== '' && isNaN(value)){
               errorMsg = 'Invalid Amount: Enter a positive number';
-              setValid(false);
+              setIsValid(false);
               showError(errorMsg, showErrorMsg, 1);
               return false;
             } else if (value !== '' && Number(value) !== 0 &&!isNaN(value)){
