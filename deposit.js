@@ -88,7 +88,7 @@ function Deposit() {
                     style={{maxwidth: '300px'}} /> <br/>
                   <input
                     type="submit"
-                    className={`btn ${isValid  "btn-primary": "btn-light text-black-50"}`}
+                    className={`btn  "btn-primary": "btn-light text-black-50"}`
                     id='submit-button'
                     value={Deposit}
                     onClick={handleDeposit} />
