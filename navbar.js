@@ -17,7 +17,7 @@ function NavBar () {
                 </button>
                 <ul className="navbar-nav">
                     <li className='nav-item'>
-                        <a onClick={setClass({href:"#/"})} data-toggle="tooltip" data-placement="bottom" title="Ladri Bank Co. Home Page" className={"#/" === active ? 'nav-link active' : 'nav-link'} href="#/">BadBank</a>
+                        <a onClick={setClass({href:"#/"})} data-toggle="tooltip" data-placement="bottom" title="Ladri Bank Co. Home Page" className={"#/" === active ? 'nav-link active' : 'nav-link'} href="#/">Ladri Bank Co.</a>
                     </li>
                 </ul>
                 <div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
