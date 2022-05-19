@@ -65,9 +65,9 @@ function Withdrawl() {
         }
   
         return (
-          <Card
+          <>
             <h1>Withdraw Funds</h1>
-            <>
+            <Card>
               txtcolor= "black"
               header={`Current balance: $${balance}`}
               status= {status}
