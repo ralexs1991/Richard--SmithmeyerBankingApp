@@ -42,43 +42,41 @@ function Deposit(name, email, password, log,) {
   function clearForm (){
     setAmount(' ');
   } 
-  
-    return (
-      <>
-        <h1>Deposit Funds</h1>
-        <Card
-          txtcolor= "black"
-          header={`Current balance: $${balance}`}
-          status= {status}
-          body={show ? (
-            <>
-              <label> Deposit Amount:</label><br/>
-              $<input
-                type= "input"
-                id= "amount"
-                placeholder='0'
-                value={amount}
-                onChange={e => validate('amount', e.currentTarget.value, 1)}
-                style={{maxwidth: '300px'}} /> <br/>
-              <input
-                type={submit}
-                className={`btn ${isValid ? "btn-primary": "btn-light text-black-50"}`}
-                id='submit-button'
-                value={Deposit}
-                onClick={handleDeposit} />
-              </>
-          ):( 
-            <>
-              <h5 className='text-success mb-4'> Your ${parseFloat(amount).toFixed(2)} have been successfully submitted</h5>
-              <button
-                type='submit'
-                className="btn btn-primary"
-                onClick={clearForm}> New Deposit 
-              </button>
-              </>
-          )}
-        />    
-      </>
-    )
-}
-  
+   return (
+          <>
+            <h1>Withdraw Funds</h1>
+            <Card
+              txtcolor= "black"
+              header={`Current balance: $${balance}`}
+              status= {status}
+              body={show ? (
+                <>
+                  <label> Withdrawl Amount:</label><br/>
+                  $<input
+                    type= "input"
+                    id= "amount"
+                    placeholder='0'
+                    value={amount}
+                    onChange={e => validate('amount', e.currentTarget.value, 1)}
+                    style={{maxwidth: '300px'}} /> <br/>
+                  <input
+                    type="submit"
+                    className={`btn ${isValid ? "btn-primary": "btn-light text-black-50"}`}
+                    id='submit-button'
+                    value={Withdrawl}
+                    onClick={handleWithdraw} />
+                  </>
+              ):( 
+                <>
+                  <h5 className='text-success mb-4'> ${parseFloat(amount).toFixed(2)} have been successfully withdrawn</h5>
+                  <button
+                    type='submit'
+                    className="btn btn-primary"
+                    onClick={clearForm}> New withdraw 
+                  </button>
+                  </>
+              )}
+            />    
+          </>
+        )
+    }
