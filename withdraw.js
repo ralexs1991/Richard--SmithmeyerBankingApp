@@ -63,11 +63,10 @@ function Withdrawl() {
         function clearForm(){
           setAmount('');
         }
-  
-        return (
+   return (
           <>
             <h1>Withdraw Funds</h1>
-            <Card>
+            <Card
               txtcolor= "black"
               header={`Current balance: $${balance}`}
               status= {status}
@@ -99,9 +98,6 @@ function Withdrawl() {
                   </>
               )}
             />    
-          
+          </>
         )
     }
-  
-  
-  
