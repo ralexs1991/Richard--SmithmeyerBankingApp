@@ -1,13 +1,20 @@
-function tooltip () {
-    $('[data-toggle="tooltip"]').tooltip();
-}
+function NavBar() {
+  const ctx = React.useContext(UserContext);
+  const [highlight, setHighlight] = React.useState("home")
 
-function NavBar () {
-    const [active, setActive] = React.useState('#/');
-    const setClass = (element) => (event) => {
-       let link = element.href;
-       setActive(link);
+  React.useEffect(() => {
+    let isLoggedIn = false;
+    for (let i = 0; i < ctx.users.length; i++) {
+      if (ctx.users[i].loggedIn == true) {
+        isLoggedIn = true;
+        break;
+      }
+      else {
+        isLoggedIn = false;
+      }
     }
+    ctx.setLoggedIn(isLoggedIn);
+  }, [])
 
     return(
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
