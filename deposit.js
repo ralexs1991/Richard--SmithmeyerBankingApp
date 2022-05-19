@@ -1,4 +1,4 @@
-function Withdrawl() { 
+function Deposit() { 
     const [show, setShow]         = React.useState(true);
     const [isValid, setIsValid]   = React.useState(false);
     const [status, setStatus]     = React.useState('');
@@ -6,7 +6,7 @@ function Withdrawl() {
     const [balance, setBalance] = React.useState('');
     const ctx = React.useContext(UserContext); 
   
-    let balance = 100;
+    let balance = 0;
     if (ctx.users[0]){
     balance= ctx.users[0].balance;
     }
