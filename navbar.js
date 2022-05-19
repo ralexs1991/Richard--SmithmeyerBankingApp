@@ -23,20 +23,20 @@ function NavBar () {
                 <div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
                     <ul className="navbar-nav">
                         <li className="nav-item">
-                            <a data-toggle="tooltip" data-placement="bottom" title="Create Account" className={"#/CreateAccount/" === active ? 'nav-link active' : 'nav-link'} onClick={setClass({href: "#/CreateAccount/"})} href='#/CreateAccount/'>Create Account</a>
+                            <a data-toggle="tooltip" data-placement="bottom" title="Create a new Account" className={"#/CreateAccount/" === active ? 'nav-link active' : 'nav-link'} onClick={setClass({href: "#/CreateAccount/"})} href='#/CreateAccount/'>Create Account</a>
                         </li>
                         <li className="nav-item">
-                            <a data-toggle="tooltip" data-placement="bottom" title="Login/Logout" className={"#/Login" === active ? 'nav-link active' : 'nav-link'} onClick={setClass({href:"#/Login"})} href='#/Login/'>Log In</a>
+                            <a data-toggle="tooltip" data-placement="bottom" title="Log into your Account" className={"#/Login" === active ? 'nav-link active' : 'nav-link'} onClick={setClass({href:"#/Login"})} href='#/Login/'>Log In</a>
                         </li>
                         <li className="nav-item">
                             <a data-toggle="tooltip" data-placement="bottom" title="Made a deposit" className={"#/deposit/" === active ? 'nav-link active' : 'nav-link'} onClick={setClass({ href: "#/deposit/" })} href='#/deposit/'>Deposit</a>
                         </li>
                         <li className="nav-item">
-                            <a data-toggle="tooltip" data-placement="bottom" title="Make a withdraw" className={"#/withdraw/" === active ? 'nav-link active' : 'nav-link'} onClick={setClass({ href: "#/withdraw/" })} href='#/withdraw/'>Withdraw</a>
+                            <a data-toggle="tooltip" data-placement="bottom" title="Make a withdrawl" className={"#/withdraw/" === active ? 'nav-link active' : 'nav-link'} onClick={setClass({ href: "#/withdraw/" })} href='#/withdraw/'>Withdraw</a>
                         </li>
 
                         <li className="nav-item">
-                            <a data-toggle="tooltip" data-placement="bottom" title="All Data" className={"#/alldata/" === active ? 'nav-link active' : 'nav-link'} onClick={setClass({href:"#/alldata/"})} href='#/alldata/'>All Data</a>
+                            <a data-toggle="tooltip" data-placement="bottom" title="All User Data" className={"#/alldata/" === active ? 'nav-link active' : 'nav-link'} onClick={setClass({href:"#/alldata/"})} href='#/alldata/'>All Data</a>
                         </li>
                     </ul>
                 </div>
