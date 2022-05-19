@@ -8,17 +8,13 @@ function NavBar() {
     }
 
   React.useEffect(() => {
-    let isLoggedIn = false;
-    for (let i = 0; i < ctx.users.length; i++) {
-      if (ctx.users[i].loggedIn == true) {
-        isLoggedIn = true;
-        break;
+      let user = ctx.users.filter((user) => user.log === true);
+      let index;
+      if (user.length > 0) {
+        index = ctx.users.indexOf(user[0]);
+        setCurrentUser(user[0]);
       }
-      else {
-        isLoggedIn = false;
-      }
-    }
-    ctx.setLoggedIn(isLoggedIn);
+    }, [ctx.users, users]);
   }, [])
 
     return(
