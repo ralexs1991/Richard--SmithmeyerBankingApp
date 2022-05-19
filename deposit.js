@@ -18,6 +18,15 @@ function Deposit(name, email, password, log, amount) {
     }
   
     console.log('user', user);
+    
+    function handleDeposit(){
+    if (!validate ( 'amount', amount, 1)) return;
+    if (ctx.users[0]) {
+      let newBalance = parseFloat(balance) + parseFloat(amount);
+      newBalance = newBalance.toFixed(2);
+      ctx.users[0].balance = Number(newBalance);
+  
+    }
   
   
   balance = parseFloat(balance).toFixed(2);
@@ -27,14 +36,7 @@ function Deposit(name, email, password, log, amount) {
     console.log('String:' + value);
   }
   
-  function handleDeposit(){
-    if (!validate ( 'amount', amount, 1)) return;
-    if (ctx.users[0]) {
-      let newBalance = parseFloat(balance) + parseFloat(amount);
-      newBalance = newBalance.toFixed(2);
-      ctx.users[0].balance = Number(newBalance);
-  
-    }
+ 
   }
   
   
