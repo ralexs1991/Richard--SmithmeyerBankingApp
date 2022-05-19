@@ -3,6 +3,10 @@ const Link = ReactRouterDOM.Link
 const HashRouter = ReactRouterDOM.HashRouter;
 const UserContext = React.createContext(null);
 const BankContext = React.createContext();
+const [show, setShow]         = React.useState(true);
+const [logInStatus, setLogInStatus]     = React.useState('');
+const [valid, setValid]       = React.useState('');
+const ctx = React.useContext(UserContext);  
 let loggedin;
 
 function Card(props) {
