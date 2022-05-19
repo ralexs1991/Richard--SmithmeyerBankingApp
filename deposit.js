@@ -35,7 +35,7 @@ function Deposit(name, email, password, log, amount) {
       let newBalance = parseFloat(balance) + parseFloat(amount);
       newBalance = newBalance.toFixed(2);
       ctx.users[0].balance = Number(newBalance);
-      balance = parseFloat(balance).toFixed(2);
+      ctx[i].balance = parseFloat(balance).toFixed(2);
   
     }
   
