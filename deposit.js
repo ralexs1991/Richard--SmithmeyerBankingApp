@@ -38,10 +38,6 @@ function Deposit(name, email, password, log,) {
   }
   
   
-  
-  function clearForm (){
-    setAmount(' ');
-  } 
    return (
           <>
             <h1>Withdraw Funds</h1>
